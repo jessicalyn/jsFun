@@ -8,3 +8,10 @@ const mods = [
 module.exports = {
   mods
 };
+
+
+//Go into the array and in each object we need to take the
+//key of students/ key instructors
+//Assign that value toa new key value pair called
+//studentsperinstructor
+//And return that array of objects with the new key values

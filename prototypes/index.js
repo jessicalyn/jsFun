@@ -23,8 +23,15 @@ const kittyPrompts = {
   orangeKittyNames() {
     // Return an array of just the names of kitties who are orange e.g.
     // ['Tiger', 'Snickers']
+    let orangeKitties = kitties.filter(cat => {
+        return cat.color === "orange";
+    });
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    let kittyName = orangeKitties.map(names => {
+        return names.name
+    })
+
+    const result = kittyName;
     return result;
 
     // Annotation:
@@ -33,8 +40,9 @@ const kittyPrompts = {
 
   sortByAge() {
     // Sort the kitties by their age
+    let kittyAge = kitties.sort((a, b) => {return b.age - a.age})
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = kittyAge;
     return result;
 
     // Annotation:
@@ -54,8 +62,12 @@ const kittyPrompts = {
     //   color: 'orange'
     // },
     // ...etc]
+    let adultKittiesWhoHaveAchievedCathood = kitties.map(cat => {
+        cat.age += 2;
+        return cat
+    })
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = adultKittiesWhoHaveAchievedCathood;
     return result;
   }
 };
@@ -87,7 +99,16 @@ const clubPrompts = {
     //   ...etc
     // }
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = clubs.reduce((finalObject, clubObject) => {
+        clubObject.members.forEach(function(member){
+            if (!finalObject[member]) {
+                finalObject[member] = [clubObject.club]
+            } else {
+                finalObject[member].push(clubObject.club)
+            };
+        });
+        return finalObject
+    }, {});
     return result;
 
     // Annotation:
@@ -123,7 +144,10 @@ const modPrompts = {
     //   { mod: 4, studentsPerInstructor: 8 }
     // ]
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = mods.map(function (puppy){
+        console.log(puppy.mod);
+        console.log(puppy.students / puppy.instructors)
+    });
     return result;
 
     // Annotation:

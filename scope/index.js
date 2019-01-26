@@ -29,11 +29,19 @@ const scope = {
 
     // Log D: personC
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = [
+      { 'A': 'Ben' },
+      { 'B': 'CardiB' },
+      { 'C': 'CardiB'},
+      { 'D': 'Paul'}
+    ];
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Log A: is able to see the global variable for personB, 
+    // Log B: personC has been reassigned the value of personB, which was reassigned as CardiB
+    // Log C: personB was reassigned the value of CardiB, since it's a global variable we can see it
+    // Log D: personC was reassigned the value of personA (Paul), it's a global variable
   },
 
   exerciseB() {
@@ -63,7 +71,12 @@ const scope = {
 
     // Log D: number
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = [
+      { 'A': 75 },
+      { 'B': 64 },
+      { 'C': 64 },
+      { 'D': 30 }
+    ];
     return result;
 
     // Annotation:
@@ -97,7 +110,12 @@ const scope = {
 
     // Log D: greeting
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = [
+      { 'A': 'Yo' },
+      { 'B': 'Hey' },
+      { 'C': 'Hey' },
+      { 'D': 'Hello' }
+    ];
     return result;
 
     // Annotation:
@@ -131,7 +149,12 @@ const scope = {
 
     // Log D: greeting
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = [
+      { 'A': 'hi' },
+      { 'B': 'welcome' },
+      { 'C': 'welcome' },
+      { 'D': 'howdy' }
+    ];
     return result;
 
     // Annotation:
@@ -163,7 +186,12 @@ const scope = {
 
     // Log D: name
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = [
+      { 'C': 'Brittany' },
+      { 'A': 'Nathaniel' },
+      { 'B': 'Nathaniel' },
+      { 'D': 'Brittany' }
+    ];
     return result;
 
     // Annotation:
