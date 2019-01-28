@@ -30,10 +30,10 @@ const scope = {
     // Log D: personC
 
     const result = [
-      { 'A': 'Ben' },
-      { 'B': 'CardiB' },
-      { 'C': 'CardiB'},
-      { 'D': 'Paul'}
+      { A: 'Ben' },
+      { B: 'CardiB' },
+      { C: 'CardiB'},
+      { D: 'Paul'}
     ];
     return result;
 
@@ -72,15 +72,15 @@ const scope = {
     // Log D: number
 
     const result = [
-      { 'A': 75 },
-      { 'B': 64 },
-      { 'C': 64 },
-      { 'D': 30 }
+      { A: 75 },
+      { B: 64 },
+      { C: 64 },
+      { D: 30 }
     ];
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // 
   },
 
   exerciseC() {
@@ -226,7 +226,12 @@ const scope = {
 
     // Log E: dog
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = [
+      { 'C': 'Brittany' },
+      { 'A': 'Nathaniel' },
+      { 'B': 'Nathaniel' },
+      { 'D': 'Brittany' }
+    ];;
     return result;
 
     // Annotation:
@@ -498,14 +503,21 @@ const scope = {
 
     function putOnShoe() {
       // Log A: shoe
+      console.log("A" + shoe);
       var shoe = 'boot';
     }
 
     // Log B: shoe
+    console.log("B" + shoe);
     putOnShoe();
     // Log C: shoe
+    console.log("C" + shoe);
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = [
+      { B: 'flipflop' },
+      { A: 'undefined' },
+      { C: 'flipflop'},
+    ];
     return result;
 
     // Annotation:

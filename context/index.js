@@ -34,7 +34,7 @@ const context = {
     return result;
 
     // Annotation:
-    // Rules 1 and 2 don't apply, so the default would be to point to the global window object for this.
+    // Rules 1 and 2 don't apply (no method and no new instance), so the default would be to point to the global window object for this.
   },
 
   exerciseC() {
@@ -53,7 +53,7 @@ const context = {
     return result;
 
     // Annotation: 
-    // el owns the eventListener, which owns the method getInfo
+    // el owns the eventListener method
   },
 
   exerciseD() {
@@ -141,7 +141,7 @@ const context = {
     return result;
 
     // Annotation: 
-    // this is nested in a function within a method on the Game class, so it doesn't know what this is and will default to window
+    // this is nested in an anonymous function within a method on the Game class, so it doesn't know what this is and will default to window
   },
 
   exerciseH() {
@@ -180,11 +180,11 @@ const context = {
     }, poets);
 
     // What is the value of `this` that gets returned on each iteration of poets.map()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'poets';
     return result;
 
     // Annotation: 
-    // Write your annotation here as a comment. Annotation should include explanation regarding the second argument of `poets` that is being passed
+    // the map method allows us to use another parameter to set the context of this to poets
   },
 
   exerciseJ() {
@@ -194,7 +194,7 @@ const context = {
     });
 
     // What is the value of `this` when a user clicks on our #btn element and the callback is triggered?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'el';
     return result;
 
     // Annotation: 
@@ -208,7 +208,7 @@ const context = {
     });
 
     // What is the value of `this` when a user clicks on our #btn element and the callback is triggered?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'global window object';
     return result;
 
     // Annotation: 

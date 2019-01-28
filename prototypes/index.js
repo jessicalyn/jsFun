@@ -144,10 +144,9 @@ const modPrompts = {
     //   { mod: 4, studentsPerInstructor: 8 }
     // ]
 
-    const result = mods.map(function (puppy){
-        console.log(puppy.mod);
-        console.log(puppy.students / puppy.instructors)
-    });
+    const result = mods.map((puppy) => {
+        return {mod: puppy.mod, studentsPerInstructor: puppy.students / puppy.instructors}
+        });
     return result;
 
     // Annotation:
@@ -182,7 +181,9 @@ const cakePrompts = {
     //    ..etc
     // ]
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = cakes.map((obj) => {
+        return {flavor: obj.cakeFlavor, inStock: obj. inStock}
+    });
     return result;
 
     // Annotation:
@@ -210,7 +211,8 @@ const cakePrompts = {
     // ..etc
     // ]
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = cakes.filter(cake => cake.inStock);
+
     return result;
 
     // Annotation:
